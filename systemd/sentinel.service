@@ -1,0 +1,17 @@
+[Unit]
+Description=Security Sentinel -- Defensive monitoring (PAN/VDBIR/MITRE heuristics)
+After=network.target postgresql.service nats-server.service
+
+[Service]
+Type=simple
+User=ai-fleet
+EnvironmentFile=/etc/ai-fleet/fleet.conf
+Environment=SENTINEL_PORT=8776
+Environment=SENTINEL_SCAN_INTERVAL=3600
+ExecStart=/usr/bin/python3 /opt/security-agents/sentinel.py
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

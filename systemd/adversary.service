@@ -1,0 +1,19 @@
+[Unit]
+Description=Security Adversary -- Offensive red team (9 attack playbooks)
+After=network.target postgresql.service nats-server.service
+
+[Service]
+Type=simple
+User=ai-fleet
+EnvironmentFile=/etc/ai-fleet/fleet.conf
+Environment=ADVERSARY_PORT=8777
+Environment=ADVERSARY_QUICK_INTERVAL=21600
+Environment=ADVERSARY_DEEP_INTERVAL=86400
+Environment=ADVERSARY_SAFE_MODE=true
+ExecStart=/usr/bin/python3 /opt/security-agents/adversary.py
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

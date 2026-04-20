@@ -1,0 +1,17 @@
+[Unit]
+Description=Continuous Improvement Engine -- Weekly research + improvement cycle
+After=network.target postgresql.service nats-server.service
+
+[Service]
+Type=simple
+User=ai-fleet
+EnvironmentFile=/etc/ai-fleet/fleet.conf
+Environment=CIE_PORT=8778
+Environment=CIE_CYCLE_INTERVAL=604800
+ExecStart=/usr/bin/python3 /opt/security-agents/cie.py
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
