@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Luxedeum, LLC d/b/a Monster Gaming
+
 """lux_sentinel.py — Defensive security monitoring agent.
 
 Always-on service monitoring AI fleet infrastructure with heuristics from:

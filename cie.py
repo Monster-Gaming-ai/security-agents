@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Luxedeum, LLC d/b/a Monster Gaming
+
 """lux_cie.py — Continuous Improvement Engine (CIE).
 
 Meta-improvement agent that ensures the entire fleet gets smarter every week.

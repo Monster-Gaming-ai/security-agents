@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Luxedeum, LLC d/b/a Monster Gaming
+
 """lux_adversary.py — Offensive security red team agent.
 
 Scheduled penetration tester that actually probes AI fleet infrastructure
