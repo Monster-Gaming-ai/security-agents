@@ -2,7 +2,7 @@
 
 Autonomous security agents for AI fleet infrastructure. Three Python agents that continuously monitor, pentest, and improve the security posture of systems running AI agent fleets.
 
-Built and battle-tested on a production fleet of 110 AI agents. Open-sourced by [Monster Gaming](https://monstergaming.ai) / [Luxedeum, LLC](https://luxedeum.ai).
+Built and battle-tested on a production fleet of 145 AI agents. Open-sourced by [Monster Gaming](https://monstergaming.ai) / [Luxedeum, LLC](https://luxedeum.ai).
 
 **Blog post:** [We Built AI Agents That Hack Our Own Infrastructure Every 6 Hours](https://blog.monstergaming.ai/we-built-ai-agents-that-hack-our-own-infrastructure-every-6-hours/)
 
@@ -130,7 +130,7 @@ Each agent exposes health and data endpoints:
 
 ## First Scan Results (Our Production Fleet)
 
-Our first scan against 110 AI agents found 24 findings:
+Our first scan against 145 AI agents found 24 findings:
 
 - 6 critical (2 were false positives)
 - 6 high
